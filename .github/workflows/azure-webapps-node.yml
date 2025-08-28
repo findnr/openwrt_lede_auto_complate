@@ -1,0 +1,34 @@
+name: LEDE Firmware Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      device:
+        description: '设备型号'
+        required: true
+        default: 'r68s'
+        type: choice
+        options:
+        - r68s
+        - x86
+      kernel:
+        description: '内核版本'
+        required: true
+        default: '6.6'
+      ip:
+        description: '默认IP地址'
+        required: true
+        default: '192.168.1.180'
+      hostname:
+        description: '主机名'
+        required: true
+        default: 'lede-router'
+      build_dir:
+        description: '编译目录'
+        required: true
+        default: '/mnt'
+      clean:
+        description: '清理编译'
+        required: false
+        type: boolean
+        default: false
