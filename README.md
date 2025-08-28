@@ -1,0 +1,2 @@
+# openwrt_lede_auto_complate
+自动编译openwrt中lede系统，支持r68s和x86
